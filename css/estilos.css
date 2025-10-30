@@ -1,0 +1,21 @@
+    h1{
+            color: #a354d8;
+            background: rgb(81, 189, 140);
+            border: 1px solid black;
+            width: 600px;
+            height: 90px;
+        }
+
+        h2{
+            color: #da3d25;
+            background: #5D2118;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid red;
+        }
+        p{
+            background: rgb(30, 215, 212);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }

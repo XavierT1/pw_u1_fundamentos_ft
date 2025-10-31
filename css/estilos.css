@@ -1,3 +1,4 @@
+ /*2. por tipo de elemtno html*/   
     h1{
             color: #a354d8;
             background: rgb(81, 189, 140);
@@ -18,4 +19,7 @@
         p{
             background: rgb(30, 215, 212);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            background: black;
         }

@@ -1,0 +1,49 @@
+
+/*2. selector por Clase*/
+.titulos{
+    color:red;
+    front-size: 30px;   
+    background: black;
+}
+
+/*3. selector por ID*/
+#id_titulo{
+    color:blue;
+    background: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}   
+/*4. Pseudo Clase (eventos)*/
+i:hover{
+    color: blue;
+    font-size: 50px;
+}
+input:focus{
+    border-color: rgb(210, 234, 52);
+    
+    background: red;
+}
+/*5. Selector por atributo*/
+[id] {
+    color: brown;
+    font-size: 40px ;
+}
+img[alt="No1"]{
+    width: 80px;
+    height:80px;
+   
+}
+/*
+img[alt="No2"]{
+    width: 150px;
+    height:150px;
+}
+*/
+
+img[alt*="uce"]{
+    width: 150px;
+    height:150px;
+}
+/*5. Selector universal*/
+* {
+    /*delaraciones*/
+}

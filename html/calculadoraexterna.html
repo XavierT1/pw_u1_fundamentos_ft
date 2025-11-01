@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jsexterno.js"></script>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <section>
+        <div id = "id_div"></div>
+        <label id="id_label_1" for="id_n1">Numero 1</label>
+        <input id="id_n1" type="number">
+        <label id="id_label_2" for="id_n2">Numero 2</label>
+        <input id="id_n2" type="number">
+        <button onclick="cambiarColor('id_label_1', 'blue')">Cambiar 1</button>
+        <button onclick="cambiarColor('id_label_2', 'red')">Cambiar 2</button>
+        <button onclick="agregarElemento('id_div', construirH1())">Agregar</button>
+        <button onclick="elminarElemento('id_label_1')">Eliminar</button>
+        <button onclick="mostrarElemento('id_label_1')">Mostrar</button>
+        <button onclick="ocultarElemento('id_label_1')">Ocultar</button>
+
+        <hr>
+        <button onclick="evaluarOperacion('+')">+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
+        <label for="id_resultado" for =""></label>
+
+    </section>
+    <footer></footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <section>
+        <label id="id_label_1" for="id_n1">Numero 1</label>
+        <input id="id_n1" type="number">
+        <label id="id_label_2" for="id_n2">Numero 2</label>
+        <input id="id_n2" type="number">
+        <button onclick="document.getElementById('id_label_1').style.color = 'red'">Cambiar Color</button>
+        <button onclick="document.getElementById('id_label_2').innerText='Numero Dos'">Cambiar Texto</button>
+        <button onclick="document.getElementById('id_label_1').style.fontSize = '50px'">Cambiar tamano</button>
+        <h1 id="id_h1"></h1>
+        <button onclick="document.getElementById('id_h1').innerText = document.getElementById('id_label_1').innerText + document.getElementById('id_label_2').innerText">Concatenar</button>
+
+
+    </section>                                                                  
+    <aside></aside>
+    <footer></footer>
+</body>
+</html>

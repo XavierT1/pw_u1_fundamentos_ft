@@ -18,16 +18,17 @@
         <button onclick="cambiarColor('id_label_1', 'blue')">Cambiar 1</button>
         <button onclick="cambiarColor('id_label_2', 'red')">Cambiar 2</button>
         <button onclick="agregarElemento('id_div', construirH1())">Agregar</button>
-        <button onclick="elminarElemento('id_label_1')">Eliminar</button>
         <button onclick="mostrarElemento('id_label_1')">Mostrar</button>
         <button onclick="ocultarElemento('id_label_1')">Ocultar</button>
+        <button onclick="elminarElemento('id_label_1')">Eliminar</button>
+        
 
         <hr>
         <button onclick="evaluarOperacion('+')">+</button>
-        <button>-</button>
-        <button>*</button>
-        <button>/</button>
-        <label for="id_resultado" for =""></label>
+        <button onclick="evaluarOperacion('-')">-</button>
+        <button onclick="evaluarOperacion('*')">*</button>
+        <button onclick="evaluarOperacion('/')">/</button>
+        <label id="id_resultado" for=""></label>
 
     </section>
     <footer></footer>

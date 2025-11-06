@@ -52,3 +52,95 @@
         function dividir(num1, num2){
             return num1 / num2;
         }
+        function fundamentosJS(){
+            /*Tipos de variables*/
+            var nombre = "Freddy"; //Antigua, ya es considerada obsoleta
+            let apellido = "Tapia"; // Para variables cambiantes
+            let apellido2 = 15;
+            apellido2 = "Teran"; // Variable global
+            let arreglo = [1,2,3,4,5,6]; // Arreglo
+            let diasSemana = ['Lunes', 'Martes','...'] // Arreglo de strings
+            const IVA = 12.8; // Constante
+            console.log('Fundamentos de JS');
+            console.log(nombre);
+            console.log(IVA);
+            console.log(arreglo);
+            //Arreglos
+            const arreglosDiasSemana = ['Lunes', 'Martes', 'Miercoles'];
+            arreglosDiasSemana.push('Jueves'); // Agregar un elemento al final
+            arreglosDiasSemana.unshift('Dias')
+            console.log(arreglosDiasSemana);
+            console.log(arreglosDiasSemana[0]);
+            console.log('Manejo de nulos, undefined y Vacio');
+            arreglosDiasSemana.push(null);
+            arreglosDiasSemana.push('');
+            console.log(arreglosDiasSemana[5]);
+            console.log(arreglosDiasSemana[6]);
+            console.log(arreglosDiasSemana[7]);
+
+            const numerosPares =[2,4,6,8];
+            const numerosImpares =[1,3,5,7,9];
+            const numerosTotales = numerosImpares.concat(numerosPares);
+            console.log(numerosTotales);
+
+            /*Sentencias de control*/
+            let edad=19;
+            if(edad>18){
+                console.log('Es mayor de edad');
+            }else{
+                console.log('Es menor de edad');
+            }
+
+            let dia = 'Lunes';
+            switch(dia){
+                case 'Lunes':
+                    console.log('Es Lunes');
+                    break;
+                case 'Martes':
+                    console.log('Es Martes');
+                    break;
+                default:
+                    console.log('No es ninguno de esos dias ');
+                    break;
+            }   
+
+            for (let i=0; i <= 5; i++){
+                console.log(i);
+            
+            }
+
+            const frutas = ['Manzana', 'Sandia', 'Papaya','Naranja'];
+            for(let fruta of frutas){
+                console.log(fruta);
+
+            }
+
+            /*manejo de objetos*/
+            const profesor = {
+                nombre: 'Freddy',
+                apellido: 'Tapia',
+                edad: 25,
+                ecuatoriano: true,
+                genero: 'M',
+                ciudad: 'Quito'
+            }
+            console.log(profesor);
+            console.log(profesor.nombre);
+            profesor.apellido = 'Teran';
+            console.log(profesor);
+
+            /*Comparadores*/
+            if(profesor.ciudad === 'Quito'){
+                console.log('Es Quiteño');
+            }
+            if(profesor.edad !== 35){
+                console.log('Es diferente de 36');
+            }else{
+                console.log('Es 36');
+            }
+
+            for (let clave in profesor){
+                console.log(clave);
+                console.log(profesor[clave]);
+            }   
+} 

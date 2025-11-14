@@ -1,64 +1,72 @@
 function guardar() {
-    validarCampos();
+  validarCampos();
 }
- 
+
 function validarCampos() {
-    let nombre = document.getElementById('nombre').value;
-    let apellido = document.getElementById('apellido').value;
-    let fecha = document.getElementById('fecha').value;
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
- 
- 
-    if (nombre === "") {
-        mostrarMensaje('Nombre esta vacio');
-        mostrarAsterisco('id-error-nombre');
-        return;
-    }
- 
-    if (apellido === "") {
-        alert('El campo apellido es obligatorio');
-        return;
-    }
- 
-    if (fecha === "") {
-        alert('El campo fecha es obligatorio');
-        return;
-    }
- 
-    if (email === "") {
-        mostrarMensaje('El campo email es obligatorio');
-        mostrarAsterisco('id-error-email');
-        return;
-    }
-    if (!validarCorreo(email)) {
-        mostrarMensaje('El correo no es valido');
-        mostrarAsterisco('id-error-email');
-        return;
-    }
- 
-    if (password === "") {
-        alert('El campo password es obligatorio');
-        return;
-    }
+  limpiarMensajes();
+
+  let nombre = document.getElementById("nombre").value.trim();
+  let apellido = document.getElementById("apellido").value.trim();
+  let fecha = document.getElementById("fecha").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let password = document.getElementById("password").value.trim();
+
+  if (nombre === "") {
+    mostrarMensaje("Nombre está vacío");
+    mostrarAsterisco("id-error-nombre");
+    return;
+  }
+
+  if (apellido === "") {
+    mostrarMensaje("Apellido está vacío");
+    mostrarAsterisco("id-error-apellido");
+    return;
+  }
+
+  if (fecha === "") {
+    mostrarMensaje("Fecha está vacía");
+    mostrarAsterisco("id-error-fecha");
+    return;
+  }
+
+  if (email === "") {
+    mostrarMensaje("Email está vacío");
+    mostrarAsterisco("id-error-email");
+    return;
+  }
+
+  if (!validarCorreo(email)) {
+    mostrarMensaje("El correo no es válido");
+    mostrarAsterisco("id-error-email");
+    return;
+  }
+
+  if (password === "") {
+    mostrarMensaje("Contraseña está vacía");
+    mostrarAsterisco("id-error-password");
+    return;
+  }
 }
- 
+
 function mostrarMensaje(msg) {
-    let mensaje = document.getElementById('id-msg-error');
-    mensaje.innerText = msg;
-    mensaje.style.display = 'block';
+  let mensaje = document.getElementById("id-msg-error");
+  mensaje.innerText = msg;
+  mensaje.style.display = "block";
 }
- 
+
 function mostrarAsterisco(idElemento) {
-    document.getElementById(idElemento).innerText = '*';
+  document.getElementById(idElemento).innerText = "*";
 }
- 
+
 function limpiarMensajes() {
-    let errorAsterisco = document.querySelectorAll('.error-asterisco');
-    errorAsterisco.forEach(e => e.innerText = '');
+  document.getElementById("id-msg-error").innerText = "";
+  document.getElementById("id-msg-error").style.display = "none";
+
+  let errorAsterisco = document.querySelectorAll(".error_asterisco");
+  errorAsterisco.forEach((e) => (e.innerText = ""));
 }
- 
+
 function validarCorreo(email) {
-    const patron = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return patron.test(email);
+  const patron = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return patron.test(email);
 }

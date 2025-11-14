@@ -43,7 +43,7 @@ button {
   margin-top: 20px;
 }
 
-.centrar-boton {
+.btn {
   display: flex;
   justify-content: center;
 }
@@ -67,9 +67,9 @@ header {
   color: #b30000;
   display: none;
   font-weight: bold;
-} 
+}
 
-.error_asterisco{
+.error_asterisco {
   color: red;
   font-weight: bold;
   font-size: 18px;
